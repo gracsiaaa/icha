@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WARUNG RISOLEH | Aneka Risol & Es Cincau</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Header & Navbar Kapsul -->
+    <header class="top-header">
+      <nav class="navbar-container">
+        <div class="nav-pill">
+          <div class="nav-left">
+            <a href="index.html" class="active">Beranda</a>
+            <a href="produk.html">Menu</a>
+          </div>
+          
+          <div class="nav-center">
+            <div class="logo-circle" onclick="window.location.href='index.html'">
+              <img src="logo risoleh.jpg" alt="Logo">
+            </div>
+          </div>
+          
+          <div class="nav-right">
+            <a href="kontak.html">Tentang Kami</a>
+            <div class="cart-trigger" onclick="openCart()">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span id="cart-count">0</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Slider Banner Otomatis -->
+    <section class="slider-container">
+      <div class="slides">
+        <div class="slide active">
+          <img src="Resep-Risol-Mayo-Lumer-Cocok-Untuk-Usaha-Kuliner.jpg (2).jpeg" alt="Risol">
+          <div class="slide-caption">
+            <h2>Risol Mayo</h2>
+            <p>Risol yang renyah dengan isian yang melimpah</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="cincau.png" alt="Es Cincau">
+          <div class="slide-caption">
+            <h2>Es Cincau</h2>
+            <p>Perpaduan sirup, cincau, dan es yang menyegarkan</p>
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+      </div>
+    </section>
+
+    <!-- Deskripsi Brand -->
+    <section class="brand-description">
+      <h1>WARUNG RISOLEH</h1>
+      <p class="sub-text">Murah dan Lezat • 100% Halal</p>
+      <div class="line-deco"></div>
+      <p class="main-desc">Menyediakan berbagai macam varian risol yang renyah dan es cincau yang menyegarkan untuk berbuka puasa.</p>
+    </section>
+
+    <section class="container products-section">
+  <div class="hero-content-wrapper">
+    <!-- Bagian Kiri: Tulisan & Tombol -->
+    <div class="hero-text">
+      <h1>Lapar? Jangan Tunggu Lama!</h1>
+      <p>Nikmati Risoleh hangat yang lumer di mulut sekarang juga.</p>
+      <a href="produk.html" class="btn-pesan">Pesan Sekarang</a>
+    </div>
+
+    <!-- Bagian Kanan: Gambar -->
+    <div class="hero-image">
+      <img src="tips-membuat-risol-mayo-resep-risol-mayo-cara-membuat-kulit-risol-tips-mayonais-tidak-hilang-tips-mayonais-lumer-risol-mayo-simpel-9cde86371d7fc78c91ae80a6ffab250e-f6ce8413b01479537d09f73df91c3703.jpg.jpeg" alt="Foto Produk Risoleh">
+    </div>
+  </div>
+</section>
+
+    <footer>
+      <p>&copy; 2026 WARUNG RISOLEH. Lapar? Jangan tunggu lama!</p>
+    </footer>
+
+    <!-- Keranjang Belanja (Sidebar) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Keranjang Saya</h2>
+        <span class="close-cart" onclick="closeCart()">&times;</span>
+      </div>
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Item keranjang akan muncul di sini -->
+      </div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total Pembayaran:</span>
+          <span id="cart-total-amount">Rp 0</span>
+        </div>
+        <button class="btn-checkout" onclick="processCheckoutAll()">
+          <i class="fa-brands fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

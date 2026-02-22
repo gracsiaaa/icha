@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang & Kontak | WARUNG RISOLEH</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      /* Style Khusus Halaman Kontak & About */
+      .about-section {
+        background-color: var(--soft-cream);
+        padding: 80px 20px;
+        border-radius: 50px 50px 0 0;
+        text-align: center;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        max-width: 1000px;
+        margin: 50px auto;
+        margin-right: 20px;
+      }
+
+      .team-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        transition: 0.3s;
+      }
+
+      .team-card:hover { transform: translateY(-10px); }
+
+      .team-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: var(--bakery-yellow);
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: var(--warm-brown);
+        overflow: hidden;
+      }
+      
+      .team-img img { width: 100%; height: 100%; object-fit: cover; }
+      
+      .contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .contact-info {
+        flex: 1;
+        min-width: 300px;
+        text-align: left;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+      }
+
+      .info-item i {
+        width: 50px;
+        height: 50px;
+        background: var(--bakery-yellow);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+
+      .map-container {
+        flex: 1;
+        min-width: 300px;
+        height: 350px;
+        background: #eee;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 5px solid white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar Kapsul -->
+    <header class="top-header">
+      <nav class="navbar-container">
+        <div class="nav-pill">
+          <div class="nav-left">
+            <a href="index.html">Beranda</a>
+            <a href="produk.html">Menu</a>
+          </div>
+          <div class="nav-center">
+            <div class="logo-circle" onclick="window.location.href='index.html'">
+              <img src="logo risoleh.jpg" alt="Logo">
+            </div>
+          </div>
+          <div class="nav-right">
+            <a href="kontak.html" class="active">Tentang Kami</a>
+            <div class="cart-trigger" onclick="openCart()">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span id="cart-count">0</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <h1 style="font-family: 'Playfair Display'; margin-bottom: 20px;">Warung Risoleh</h1>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+          Warung Risoleh berawal dari ide menghadirkan jajanan sederhana yang lezat, terjangkau, dan disukai banyak orang. Kami memilih risol dengan berbagai varian rasa serta es cincau sebagai pelengkap yang menyegarkan. Usaha ini juga menjadi sarana melatih jiwa kewirausahaan, kerja sama, dan kreativitas dalam berbisnis.
+        </p>
+
+        <!-- Team Section -->
+        <h2 style="font-family: 'Playfair Display'; margin-top: 60px;">Tim Di Balik Layar</h2>
+        <div class="team-grid">
+          <div class="team-card" onclick="window.location.href='profil-daffa.html'">
+            <div class="team-img">
+               <img src="Daffa.jpg" alt="Foto Profil Daffa" />
+            </div>
+            <h3>Daffa Al Hafizh Mahasin</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Ketua</p>
+          </a>
+          </div>
+          <div class="team-card" onclick="window.location.href='profil-alif.html'">
+            <div class="team-img">
+              <img src="Alif.jpg" alt="Foto Profil Alif" />
+            </div>
+            <h3>Alif Zulfikar Setiawan</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Anggota</p>
+          </div>
+          <div class="team-card" onclick="window.location.href='profil-aurora.html'">
+            <div class="team-img">
+              <img src="Rora.jpg" alt="Foto Profil Aurora" />
+            </div>
+            <h3>Aurora Cinta Julient</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Anggota</p>
+          </div><br/>
+          <div class="team-card" onclick="window.location.href='profil-carissa.html'">
+            <div class="team-img">
+              <img src="Carissa (1).jpg" alt="Foto Profil Carissa" />
+            </div>
+            <h3>Carissa Jemima Ananta</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Anggota</p>
+          </div>
+          <div class="team-card" onclick="window.location.href='profil-fadhil.html'">
+            <div class="team-img">
+              <img src="Fadhil.jpg" alt="Foto Profil Fadhil" />
+            </div>
+            <h3>Muhammad Fadhil Saputro</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Anggota</p>
+          </div>
+          <div class="team-card" onclick="window.location.href='profil-akif.html'">
+            <div class="team-img">
+              <img src="Akif.jpg" alt="Foto Profil Akif" />
+            </div>
+            <h3>Najmi Akif Muhammad</h3>
+            <p style="color: var(--accent-green); font-weight: 600;">Anggota</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Address Section -->
+    <section style="padding: 60px 0; background-color: var(--bakery-yellow);">
+  <div class="container">
+    <h2 style="text-align: center; font-family: 'Playfair Display', serif; margin-bottom: 40px;">Hubungi Kami</h2>
+    
+    <div class="contact-grid">
+      
+      <!-- LINK INSTAGRAM -->
+      <!-- Ganti 'risoleh.id' dengan username Instagram Anda -->
+      <a href="https://www.instagram.com/warung.risoleh?igsh=MnlmNjljb2g2bmw2" target="_blank" class="contact-card">
+        <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+        <h4>Instagram</h4>
+        <p>@warung.risoleh</p>
+      </a>
+
+      <!-- LINK WHATSAPP -->
+      <!-- Ganti '6281234567890' dengan nomor WA Anda (awali dengan 62, bukan 0) -->
+      <a href="https://wa.me/6281235832752?text=Halo%20Risoleh,%20saya%20ingin%20memesan" target="_blank" class="contact-card">
+        <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+        <h4>WhatsApp</h4>
+        <p>0812-3456-7890</p>
+      </a>
+
+      <!-- JAM OPERASIONAL (Bukan Link) -->
+      <div class="contact-card no-hover">
+        <i class="fa-solid fa-clock" style="color: #333;"></i>
+        <h4>Jam Operasional</h4>
+        <p>07.00 - 21.00 WIB</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <footer>
+      <p>&copy; 2026 WARUNG RISOLEH. Lapar? Jangan tunggu lama!</p>
+    </footer>
+
+    <!-- Keranjang Belanja (Sidebar) -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Keranjang Saya</h2>
+        <span class="close-cart" onclick="closeCart()">&times;</span>
+      </div>
+      <div id="cart-items-container" class="cart-items-list"></div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Total:</span>
+          <span id="cart-total-amount">Rp 0</span>
+        </div>
+        <button class="btn-checkout" onclick="processCheckoutAll()">
+          <i class="fa-brands fa-whatsapp"></i> Pesan Sekarang
+        </button>
+      </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+    <script src="script.js"></script>
+    <script>
+      // Inisialisasi UI Keranjang saat halaman dimuat
+      document.addEventListener("DOMContentLoaded", () => {
+        updateCartUI();
+      });
+    </script>
+  </body>
+</html>
