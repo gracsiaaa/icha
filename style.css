@@ -40,7 +40,8 @@ body {
   position: relative;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
   display: flex;
   gap: 30px;
   flex: 1;
@@ -59,7 +60,8 @@ body {
   transition: 0.3s;
 }
 
-.nav-pill a.active, .nav-pill a:hover {
+.nav-pill a.active,
+.nav-pill a:hover {
   color: var(--accent-green);
 }
 
@@ -85,10 +87,11 @@ body {
 .logo-circle img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-.nav-left a, .nav-right a {
+.nav-left a,
+.nav-right a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -232,7 +235,8 @@ body {
 .btn-pesan {
   display: inline-block;
   padding: 15px 35px;
-  background-color: #ff4757; /* Warna merah menarik */
+  background-color: #ff4757;
+  /* Warna merah menarik */
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -256,24 +260,27 @@ body {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px; /* Ukuran maksimal gambar */
+  max-width: 500px;
+  /* Ukuran maksimal gambar */
   height: auto;
-  border-radius: 20px; /* Membuat sudut gambar tumpul */
+  border-radius: 20px;
+  /* Membuat sudut gambar tumpul */
   /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); Tambahkan bayangan jika suka */
 }
 
 /* RESPONSIVE: Agar bagus saat dibuka di HP */
 @media (max-width: 768px) {
   .hero-content-wrapper {
-    flex-direction: column-reverse; /* Gambar pindah ke atas di HP */
+    flex-direction: column-reverse;
+    /* Gambar pindah ke atas di HP */
     text-align: center;
     padding: 20px;
   }
-  
+
   .hero-text h1 {
     font-size: 2rem;
   }
-  
+
   .hero-image img {
     max-width: 300px;
     margin-bottom: 30px;
@@ -453,7 +460,8 @@ body {
 .contact-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Agar otomatis turun ke bawah jika layar sempit */
+  flex-wrap: wrap;
+  /* Agar otomatis turun ke bawah jika layar sempit */
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -466,9 +474,11 @@ body {
   padding: 25px;
   border-radius: 20px;
   text-align: center;
-  text-decoration: none; /* Menghilangkan garis bawah link */
-  color: #333;           /* Warna teks */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-decoration: none;
+  /* Menghilangkan garis bawah link */
+  color: #333;
+  /* Warna teks */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -478,14 +488,16 @@ body {
 
 /* Efek saat Kotak Disentuh Mouse */
 .contact-card:hover {
-  transform: translateY(-8px); /* Kotak naik sedikit */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  /* Kotak naik sedikit */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Menghilangkan efek hover pada Jam Operasional */
 .contact-card.no-hover {
   cursor: default;
 }
+
 .contact-card.no-hover:hover {
   transform: none;
 }
@@ -514,4 +526,57 @@ footer {
   font-size: 13px;
   color: #888;
   background: var(--soft-cream);
+}
+
+/* RESPONSIVE: Perbaikan Navbar untuk layar HP */
+@media (max-width: 768px) {
+
+  /* 1. Kurangi padding dalam kapsul agar ruang lebih lega */
+  .nav-pill {
+    padding: 0 15px;
+    /* Awalnya 40px */
+    height: 60px;
+  }
+
+  /* 2. Perkecil ukuran logo dan sesuaikan posisinya */
+  .logo-circle {
+    width: 65px;
+    /* Awalnya 100px */
+    height: 65px;
+    top: -15px;
+    /* Sesuaikan agar tidak terlalu ke atas */
+    border-width: 3px;
+    /* Tipiskan sedikit border kuningnya */
+  }
+
+  /* 3. Kurangi jarak (gap) antar menu */
+  .nav-left,
+  .nav-right {
+    gap: 15px;
+    /* Awalnya 30px */
+  }
+
+  /* 4. Kecilkan sedikit ukuran huruf menu */
+  .nav-pill a {
+    font-size: 13px;
+    /* Awalnya 15px */
+  }
+
+  /* Posisikan ulang sedikit keranjang jika diperlukan */
+  .cart-trigger {
+    font-size: 18px;
+  }
+}
+
+/* RESPONSIVE UNTUK LAYAR SANGAT KECIL (Dibawah 400px) */
+@media (max-width: 400px) {
+
+  .nav-left,
+  .nav-right {
+    gap: 10px;
+  }
+
+  .nav-pill a {
+    font-size: 12px;
+  }
 }
