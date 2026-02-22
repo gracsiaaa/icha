@@ -4,7 +4,7 @@ const allProducts = [
   { id: 1, name: "Risol Mayo", price: 10000, img: "risol-mayo.jpg.jpeg", desc: "Risol crispy dengan isian smoked beef, telur, dan saus mayo premium yang lumer di mulut.", text:"/2pcs"},
   { id: 2, name: "Risol Beef Bolognese", price: 10000, img: "risol beef.jpeg", desc: "Perpaduan unik kulit risol renyah dengan isian daging sapi cincang bumbu bolognese khas Italia.", text:"/2pcs" },
   { id: 3, name: "Risol Cokelat Pisang", price: 10000, img: "risol coklat.jpeg", desc: "Camilan manis dengan isian pisang raja dan cokelat lumer yang melimpah di setiap gigitan.", text:"/2pcs" },
-  { id: 4, name: "Es Cincau", price: 8000, img: "cincau.png", desc: "Minuman segar dengan cincau hitam pilihan dan sirup pandan yang menyegarkan.", text:"/2pcs" },
+  { id: 4, name: "Es Cincau", price: 8000, img: "cincau.png", desc: "Minuman segar dengan cincau hitam pilihan dan sirup pandan yang menyegarkan.",},
 ]
 
 // ==========================================
@@ -174,7 +174,7 @@ function processCheckoutAll() {
   }).join("%0A");
 
   // 3. Susun template pesan lengkap
-  const header = "Halo Dapur Manis, saya ingin memesan:%0A%0A";
+  const header = "Halo Warung Risoleh, saya ingin memesan:%0A%0A";
   const footer = `%0A%0A*Total Belanja: Rp ${totalHarga.toLocaleString("id-ID")}*%0A%0AMohon konfirmasi pesanan saya. Terima kasih!`;
   
   const pesanFinal = header + daftarPesanan + footer;
